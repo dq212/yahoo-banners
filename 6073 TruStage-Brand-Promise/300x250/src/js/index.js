@@ -131,7 +131,7 @@ var nameSpace = O2KL || {};
             1, {
                 transformPerspective: 400,
                 autoAlpha: 1,
-                width: 42.45,
+                width: 41.45,
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Power0.easeInOut

@@ -1,0 +1,144 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/css3/transform";
+@import "compass/utilities/sprites";
+// set up variables
+$width: 300px;
+$height: 50px;
+// Uncomment to include sprites in your banner
+// $sprites: sprite-map("sprites/*.png");
+// to use sprites, place the image in the sprites folder and set the background for the desired element as follows:
+// .element { background: sprite($sprites, image-name); }
+// set all elements to be box-sizing: border box to include any border, padding and content, but not margin.
+*,
+:before,
+:after {
+    @include box-sizing(border-box);
+}
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: $width;
+    height: $height;
+    overflow: hidden;
+}
+
+#bg {
+    @extend .abs-pos;
+    background-color: #ffffff;
+}
+
+// #bg-color {
+// 	@extend .abs-pos;
+// 	// background-color:#ffffff;
+// }
+#wrapper {
+    @extend .abs-pos;
+    position: relative;
+    visibility: hidden;
+    &.show {
+        visibility: visible;
+    }
+}
+
+#click_through {
+    @extend .abs-pos;
+    z-index: 999;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #000000;
+}
+
+#logo {
+    @extend .abs-pos;
+    //left:-64px;
+}
+
+// #logo-bg {
+//     @extend .abs-pos;
+//     left: 0;
+//     bottom: 0;
+//     height: 100px;
+//     width: 300px;
+//     background: #ff1199;
+// }
+#copy-1 {
+    @extend .abs-pos;
+}
+
+#copy-2 {
+    @extend .abs-pos;
+}
+
+#copy-3 {
+    @extend .abs-pos;
+}
+
+#copy-4 {
+    @extend .abs-pos;
+}
+
+#copy-5 {
+    @extend .abs-pos;
+}
+
+#cta {
+    @extend .abs-pos;
+}
+
+#cta-bg {
+    @extend .abs-pos;
+    height: 14.8px;
+    width: 52.5px;
+    left: 238.56px;
+    top: 27.41px;
+    background-color: #193062;
+}
+
+#cta-bg-wipe {
+    width: 100%;
+    height: 100%;
+    background-color: #fae07e;
+}
+
+#cta-img {
+    @extend .abs-pos;
+}
+
+#line-1 {
+    @extend .abs-pos;
+    width: 0;
+    height: 3px;
+    top: 19.81px;
+    left: 78.63px;
+    background: #fae07e;
+}
+
+#line-2 {
+    @extend .abs-pos;
+    width: 0;
+    height: 3px;
+    top: 75px;
+    left: 192px;
+    background: #fae07e;
+}
+
+#line-3 {
+    @extend .abs-pos;
+    width: 0;
+    height: 3px;
+    top: 154.4px;
+    left: 12.3px;
+    background: #fae07e;
+}
+
+#img-1 {
+    @extend .abs-pos;
+}
+
+#code {
+    @extend .abs-pos;
+}

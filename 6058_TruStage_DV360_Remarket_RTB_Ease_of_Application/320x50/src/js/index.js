@@ -127,18 +127,7 @@ var nameSpace = O2KL || {};
 
         timeline
 
-            .to(
-                ["#copy-2"],
-                1, {
-                    transformPerspective: 400,
-                    autoAlpha: 1,
-                    y: 0,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                },
-                "+=0.5"
-            )
+
             .set('#line-1', { autoAlpha: 1 })
 
         .to(
@@ -149,7 +138,7 @@ var nameSpace = O2KL || {};
                     width: 204.84,
                     force3D: true,
                     rotationZ: 0.01,
-                    ease: Power0.easeInOut
+                    ease: Power1.easeInOut
                 },
                 "+=1"
             )
@@ -157,15 +146,28 @@ var nameSpace = O2KL || {};
 
         .to(
             ["#line-2"],
-            1, {
+            0.9, {
                 transformPerspective: 400,
                 autoAlpha: 1,
                 width: 134,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.25"
+            "-=0.25"
+        )
+
+        .to(
+            ["#copy-2"],
+            1, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                y: 0,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "+=0"
         )
 
         .to(
@@ -178,7 +180,7 @@ var nameSpace = O2KL || {};
                 rotationZ: 0.01,
                 ease: Power0.easeInOut
             },
-            "+=0.25"
+            "+=2"
         )
 
         .to(
@@ -189,9 +191,9 @@ var nameSpace = O2KL || {};
                 y: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.5"
+            "+=0"
         )
 
         // .to(

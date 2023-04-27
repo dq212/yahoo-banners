@@ -129,20 +129,9 @@ var nameSpace = O2KL || {};
 
         timeline
 
-            .to(
-            ["#copy-2"],
-            1, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                x: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power0.easeInOut
-            },
-            "+=1"
-        )
 
-        .set("#line-1", { autoAlpha: 1 })
+
+            .set("#line-1", { autoAlpha: 1 })
 
         .to(
                 ["#line-1"],
@@ -152,7 +141,7 @@ var nameSpace = O2KL || {};
                     width: 31.58,
                     force3D: true,
                     rotationZ: 0.01,
-                    ease: Power0.easeInOut
+                    ease: Power1.easeInOut
                 },
                 "+=0.5"
             )
@@ -160,15 +149,15 @@ var nameSpace = O2KL || {};
 
         .to(
             ["#line-2"],
-            0.75, {
+            0.7, {
                 transformPerspective: 400,
                 autoAlpha: 1,
                 width: 87.68,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.25"
+            "-=0.25"
         )
 
         .set("#line-3", { autoAlpha: 1 })
@@ -181,25 +170,37 @@ var nameSpace = O2KL || {};
                 width: 46.64,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.25"
+            "-=0.25"
         )
 
         .set("#line-4", { autoAlpha: 1 })
 
         .to(
-            ["#line-4"],
-            1, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                width: 125.12,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power0.easeInOut
-            },
-            "+=0.25"
-        )
+                ["#line-4"],
+                0.8, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    width: 125.12,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeInOut
+                },
+                "-=0.25"
+            )
+            .to(
+                ["#copy-2"],
+                1, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    x: 0,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeInOut
+                },
+                "+=0"
+            )
 
         .to(
             ["#copy-2"],
@@ -210,7 +211,7 @@ var nameSpace = O2KL || {};
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Power0.easeInOut
-            }
+            }, "+=2"
         )
 
         .to(
@@ -221,9 +222,9 @@ var nameSpace = O2KL || {};
                 x: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.5"
+            "+=0"
         )
 
         .to(

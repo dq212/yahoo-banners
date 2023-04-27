@@ -126,7 +126,38 @@ var nameSpace = O2KL || {};
 
         timeline
 
-            .to(
+
+            .set("#line-1", { autoAlpha: 1 })
+
+        .to(
+                ["#line-1"],
+                0.7, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    width: 179.83,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeInOut
+                },
+                "+=0.5"
+            )
+            .set("#line-2", { autoAlpha: 1 })
+
+        .to(
+            ["#line-2"],
+            0.9, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                width: 259.05,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "-=0.25"
+        )
+
+
+        .to(
             ["#copy-2"],
             1, {
                 transformPerspective: 400,
@@ -134,50 +165,23 @@ var nameSpace = O2KL || {};
                 x: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=1"
+            "+=0"
         )
 
-        .set("#line-1", { autoAlpha: 1 })
-
         .to(
-                ["#line-1"],
-                1, {
-                    transformPerspective: 400,
-                    autoAlpha: 1,
-                    width: 179.83,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                },
-                "+=1"
-            )
-            .set("#line-2", { autoAlpha: 1 })
-
-        .to(
-                ["#line-2"],
-                1, {
-                    transformPerspective: 400,
-                    autoAlpha: 1,
-                    width: 259.05,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                },
-                "+=0.25"
-            )
-            .to(
-                ["#copy-2"],
-                0.5, {
-                    transformPerspective: 400,
-                    autoAlpha: 0,
-                    x: 0,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                }
-            )
+            ["#copy-2"],
+            0.5, {
+                transformPerspective: 400,
+                autoAlpha: 0,
+                x: 0,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power0.easeInOut
+            },
+            "+=2"
+        )
 
         .to(
             ["#copy-3"],
@@ -187,9 +191,9 @@ var nameSpace = O2KL || {};
                 x: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.5"
+            "+=0"
         )
 
         .to(

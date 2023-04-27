@@ -127,27 +127,17 @@ var nameSpace = O2KL || {};
 
         timeline
 
-            .to(
-            ["#copy-2"],
-            1, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                y: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power0.easeInOut
-            },
-            "+=0.5"
-        )
 
-        .set("#line-1", { autoAlpha: 1 })
+
+            .set("#line-1", { autoAlpha: 1 })
             .to(
                 ["#line-1"],
-                0.75, {
+                0.7, {
                     transformPerspective: 400,
                     width: 197.96,
                     force3D: true,
                     rotationZ: 0.01,
+                    ease: Power1.easeInOut
                 },
                 "+=1"
             )
@@ -155,14 +145,14 @@ var nameSpace = O2KL || {};
 
         .to(
                 ["#line-2"],
-                0.75, {
+                0.5, {
                     transformPerspective: 400,
                     width: 137.75,
                     force3D: true,
                     rotationZ: 0.01,
-                    ease: Power0.easeInOut
+                    ease: Power1.easeInOut
                 },
-                "+=0.25"
+                "-=0.25"
             )
             // .to(
             //     ["#line-3"],
@@ -179,6 +169,19 @@ var nameSpace = O2KL || {};
 
         .to(
             ["#copy-2"],
+            1, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                y: 0,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "+=0"
+        )
+
+        .to(
+            ["#copy-2"],
             0.5, {
                 transformPerspective: 400,
                 autoAlpha: 0,
@@ -187,7 +190,7 @@ var nameSpace = O2KL || {};
                 rotationZ: 0.01,
                 ease: Power0.easeInOut
             },
-            "+=0.25"
+            "+=2"
         )
 
         .to(
@@ -198,9 +201,9 @@ var nameSpace = O2KL || {};
                 y: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeOut
+                ease: Power1.easeOut
             },
-            "+=0.5"
+            "+=0"
         )
 
         .to(

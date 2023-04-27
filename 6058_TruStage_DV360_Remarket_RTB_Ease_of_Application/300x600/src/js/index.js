@@ -128,7 +128,68 @@ var nameSpace = O2KL || {};
 
         timeline
 
-            .to(
+
+
+            .set("#line-1", { autoAlpha: 1 })
+
+        .to(
+                ["#line-1"],
+                0.6, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    width: 161.26,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeInOut
+                },
+                "+=0.5"
+            )
+            .set("#line-2", { autoAlpha: 1 })
+
+        .to(
+            ["#line-2"],
+            0.7, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                width: 190.06,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "-=0.25"
+        )
+
+        .set("#line-3", { autoAlpha: 1 })
+
+        .to(
+            ["#line-3"],
+            0.8, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                width: 206.78,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "-=0.25"
+        )
+
+        .set("#line-4", { autoAlpha: 1 })
+
+        .to(
+            ["#line-4"],
+            0.8, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                width: 206.78,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "-=0.25"
+        )
+
+        .to(
             ["#copy-2"],
             1, {
                 transformPerspective: 400,
@@ -136,80 +197,23 @@ var nameSpace = O2KL || {};
                 x: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=1"
+            "+=0"
         )
 
-        .set("#line-1", { autoAlpha: 1 })
-
         .to(
-                ["#line-1"],
-                1, {
-                    transformPerspective: 400,
-                    autoAlpha: 1,
-                    width: 161.26,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                },
-                "+=1"
-            )
-            .set("#line-2", { autoAlpha: 1 })
-
-        .to(
-            ["#line-2"],
-            1, {
+            ["#copy-2"],
+            0.5, {
                 transformPerspective: 400,
-                autoAlpha: 1,
-                width: 190.06,
+                autoAlpha: 0,
+                x: 0,
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Power0.easeInOut
             },
-            "+=0.25"
+            "+=2"
         )
-
-        .set("#line-3", { autoAlpha: 1 })
-
-        .to(
-            ["#line-3"],
-            1, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                width: 206.78,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power0.easeInOut
-            },
-            "+=0.25"
-        )
-
-        .set("#line-4", { autoAlpha: 1 })
-
-        .to(
-                ["#line-4"],
-                1, {
-                    transformPerspective: 400,
-                    autoAlpha: 1,
-                    width: 206.78,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                },
-                "+=0.25"
-            )
-            .to(
-                ["#copy-2"],
-                0.5, {
-                    transformPerspective: 400,
-                    autoAlpha: 0,
-                    x: 0,
-                    force3D: true,
-                    rotationZ: 0.01,
-                    ease: Power0.easeInOut
-                }
-            )
 
         .to(
             ["#copy-3"],
@@ -219,9 +223,9 @@ var nameSpace = O2KL || {};
                 x: 0,
                 force3D: true,
                 rotationZ: 0.01,
-                ease: Power0.easeInOut
+                ease: Power1.easeInOut
             },
-            "+=0.5"
+            "+=0"
         )
 
         .to(

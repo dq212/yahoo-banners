@@ -10,8 +10,8 @@ var nameSpace = O2KL || {};
         // Initialize any variables here
         ids = [];
 
-        width = 728;
-        height = 90;
+        width = 300;
+        height = 250;
 
         //SET IDs IN DOM TO GLOBAL VARIABLES
         var allElements = document.getElementsByTagName("*");
@@ -33,13 +33,15 @@ var nameSpace = O2KL || {};
 
         // TweenMax.set("#allNums", { autoAlpha: 0 });
         TweenMax.set(["#copy-1"], { x: 0, y: 0, autoAlpha: 1 });
-        TweenMax.set(["#copy-2", "#copy-3"], { x: 0, y: height, autoAlpha: 0 });
+        TweenMax.set(["#copy-2", "#copy-3"], { x: -width, y: 0, autoAlpha: 0 });
         // TweenMax.set(["#line"], { x: 0, y: 1, autoAlpha: 1 });
         TweenMax.set(
             [
+
                 "#line-1",
                 "#line-2",
-                // "#line-3"
+                "#line-3",
+                "#line-4"
 
             ], {
                 x: 0,
@@ -68,7 +70,7 @@ var nameSpace = O2KL || {};
             TweenMax.to("#cta", 0.1, {
                 scale: 1.05,
                 y: 0,
-                transformOrigin: "70% 50%",
+                transformOrigin: "20% 90%",
                 rotationZ: 0.01,
                 force3D: true,
                 transformPerspective: 400,
@@ -128,51 +130,96 @@ var nameSpace = O2KL || {};
         timeline
 
 
+
             .set("#line-1", { autoAlpha: 1 })
-            .to(
+
+        .to(
                 ["#line-1"],
-                0.7, {
+                0.5, {
                     transformPerspective: 400,
-                    width: 236,
+                    autoAlpha: 1,
+                    width: 31.58,
                     force3D: true,
                     rotationZ: 0.01,
                     ease: Power1.easeInOut
                 },
-                "+=1"
+                "+=0.5"
             )
             .set("#line-2", { autoAlpha: 1 })
 
         .to(
-                ["#line-2"],
-                0.9, {
+            ["#line-2"],
+            0.7, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                width: 87.68,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "-=0.25"
+        )
+
+        .set("#line-3", { autoAlpha: 1 })
+
+        .to(
+            ["#line-3"],
+            0.5, {
+                transformPerspective: 400,
+                autoAlpha: 1,
+                width: 46.64,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power1.easeInOut
+            },
+            "-=0.25"
+        )
+
+        .set("#line-4", { autoAlpha: 1 })
+
+        .to(
+                ["#line-4"],
+                0.8, {
                     transformPerspective: 400,
-                    width: 273.45,
+                    autoAlpha: 1,
+                    width: 125.12,
                     force3D: true,
                     rotationZ: 0.01,
                     ease: Power1.easeInOut
                 },
                 "-=0.25"
             )
-            // .to(
-            //     ["#line-3"],
-            //     1, {
-            //         transformPerspective: 400,
-            //         autoAlpha: 1,
-            //         width: 120,
-            //         force3D: true,
-            //         rotationZ: 0.01,
-            //         ease: Power0.easeInOut
-            //     },
-            //     "+=0.25"
-            // )
-
+            .to(
+                ["#copy-2"],
+                1, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    x: 0,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeInOut
+                },
+                "+=0"
+            )
 
         .to(
             ["#copy-2"],
+            0.5, {
+                transformPerspective: 400,
+                autoAlpha: 0,
+                x: 0,
+                force3D: true,
+                rotationZ: 0.01,
+                ease: Power0.easeInOut
+            }, "+=2"
+        )
+
+        .to(
+            ["#copy-3"],
             1, {
                 transformPerspective: 400,
                 autoAlpha: 1,
-                y: 0,
+                x: 0,
                 force3D: true,
                 rotationZ: 0.01,
                 ease: Power1.easeInOut
@@ -181,34 +228,8 @@ var nameSpace = O2KL || {};
         )
 
         .to(
-            ["#copy-2"],
-            0.5, {
-                transformPerspective: 400,
-                autoAlpha: 0,
-                y: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power0.easeInOut
-            },
-            "+=2"
-        )
-
-        .to(
-            ["#copy-3"],
-            1, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                y: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power1.easeOut
-            },
-            "+=0"
-        )
-
-        .to(
             ["#cta-bg-wipe"],
-            0.75, {
+            1, {
                 x: "100%",
                 transformPerspective: 400,
                 autoAlpha: 1,
@@ -218,14 +239,12 @@ var nameSpace = O2KL || {};
             }, "+=0.5"
         )
 
-        .to(
-            [".cta-ltr"],
-            0.5, {
-                fill: "rgba(255,255,255, 1)",
-                ease: Power1.easeInOut,
-
-            }, "-=0.5"
-        )
+        // .to(
+        //     [".cta-ltr"],
+        //     0.5, {
+        //         fill: "rgba(255,255,255, 1)",
+        //     }, "-=0.5"
+        // )
 
     };
 

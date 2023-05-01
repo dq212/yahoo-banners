@@ -130,7 +130,7 @@ var nameSpace = O2KL || {};
 
             .fromTo(
                 ["#img-1"],
-                0.5, { x: "-25%" }, {
+                0.75, { x: "-25%" }, {
                     transformPerspective: 400,
                     autoAlpha: 1,
                     x: 0,
@@ -141,7 +141,7 @@ var nameSpace = O2KL || {};
             )
             .fromTo(
                 ["#logo-bg"],
-                0.5, { x: "-25%" }, {
+                0.75, { x: "-25%" }, {
                     transformPerspective: 400,
                     autoAlpha: 1,
                     x: 0,

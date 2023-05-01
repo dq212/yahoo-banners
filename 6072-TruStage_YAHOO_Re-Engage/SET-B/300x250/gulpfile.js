@@ -185,7 +185,7 @@ gulp.task("copy", ["clean", "cleanSprites"], function() {
 gulp.task("copyStatic", function() {
     gulp
         .src("./src/img/static.jpg")
-        .pipe(rename("6058_Yahoo_TruStage_RTB_Brand_Messaging_Animated_300x250_STATIC.jpg"))
+        .pipe(rename("6072-TruStage_YAHOO_Re-Engage_Animated_300x250_STATIC.jpg"))
         .pipe(gulp.dest("../STATICS/"));
 });
 
@@ -251,7 +251,7 @@ gulp.task(
     function() {
         return gulp
             .src(dist + "/*")
-            .pipe(zip("6058_Yahoo_TruStage_RTB_Brand_Messaging_Animated_300x250_HTML.zip"))
+            .pipe(zip("6072-TruStage_YAHOO_Re-Engage_Animated_300x250_HTML.zip"))
             .pipe(gulp.dest("../HTML/"));
     }
 );

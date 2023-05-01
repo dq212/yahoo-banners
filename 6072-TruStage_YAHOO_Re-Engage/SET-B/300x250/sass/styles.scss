@@ -57,14 +57,10 @@ $height: 250px;
     //left:-64px;
 }
 
-// #logo-bg {
-//     @extend .abs-pos;
-//     left: 0;
-//     bottom: 0;
-//     height: 100px;
-//     width: 300px;
-//     background: #ff1199;
-// }
+#logo-bg {
+    @extend .abs-pos;
+}
+
 #copy-1 {
     @extend .abs-pos;
 }
@@ -110,38 +106,18 @@ $height: 250px;
 
 #line-1 {
     @extend .abs-pos;
-    width: 0;
-    height: 4px;
-    top: 32.88px;
-    left: 14.61px;
-    background: #fae07e;
 }
 
 #line-2 {
     @extend .abs-pos;
-    width: 0;
-    height: 4px;
-    top: 57.8px;
-    left: 14.61px;
-    background: #fae07e;
 }
 
 #line-3 {
     @extend .abs-pos;
-    width: 0;
-    height: 4px;
-    top: 82.72px;
-    left: 14.61px;
-    background: #fae07e;
 }
 
 #line-4 {
     @extend .abs-pos;
-    width: 0;
-    height: 4px;
-    top: 107.64px;
-    left: 14.61px;
-    background: #fae07e;
 }
 
 #img-1 {

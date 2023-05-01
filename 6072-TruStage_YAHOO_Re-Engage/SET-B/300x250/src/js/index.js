@@ -32,20 +32,18 @@ var nameSpace = O2KL || {};
         }
 
         // TweenMax.set("#allNums", { autoAlpha: 0 });
-        TweenMax.set(["#copy-1"], { x: 0, y: 0, autoAlpha: 1 });
-        TweenMax.set(["#copy-2", "#copy-3"], { x: -width, y: 0, autoAlpha: 0 });
+        TweenMax.set(["#copy-1", "#logo-bg", "#logo", "#cta", "#code", "#img-1"], { x: -width, y: 0, autoAlpha: 0 });
+        // TweenMax.set(["#copy-2", "#copy-3"], { x: -width, y: 0, autoAlpha: 0 });
         // TweenMax.set(["#line"], { x: 0, y: 1, autoAlpha: 1 });
         TweenMax.set(
             [
 
                 "#line-1",
                 "#line-2",
-                "#line-3",
-                "#line-4"
+                "#line-3"
 
             ], {
-                x: 0,
-                width: 0,
+                x: -width,
                 autoAlpha: 0,
             }
         );
@@ -130,121 +128,67 @@ var nameSpace = O2KL || {};
         timeline
 
 
-
-            .set("#line-1", { autoAlpha: 1 })
-
-        .to(
-                ["#line-1"],
-                0.5, {
+            .fromTo(
+                ["#img-1"],
+                1, { x: "-25%" }, {
                     transformPerspective: 400,
                     autoAlpha: 1,
-                    width: 31.58,
+                    x: 0,
                     force3D: true,
                     rotationZ: 0.01,
-                    ease: Power1.easeInOut
-                },
-                "+=0.5"
+                    ease: Power1.easeOut
+                }
             )
-            .set("#line-2", { autoAlpha: 1 })
-
-        .to(
-            ["#line-2"],
-            0.7, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                width: 87.68,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power1.easeInOut
-            },
-            "-=0.25"
-        )
-
-        .set("#line-3", { autoAlpha: 1 })
-
-        .to(
-            ["#line-3"],
-            0.5, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                width: 46.64,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power1.easeInOut
-            },
-            "-=0.25"
-        )
-
-        .set("#line-4", { autoAlpha: 1 })
-
-        .to(
-                ["#line-4"],
-                0.8, {
+            .fromTo(
+                ["#logo-bg"],
+                1, { x: "-25%" }, {
                     transformPerspective: 400,
                     autoAlpha: 1,
-                    width: 125.12,
+                    x: 0,
                     force3D: true,
                     rotationZ: 0.01,
-                    ease: Power1.easeInOut
+                    ease: Power1.easeOut
                 },
-                "-=0.25"
+                "-=0.75"
             )
             .to(
-                ["#copy-2"],
+                ["#logo", "#cta"],
                 1, {
                     transformPerspective: 400,
                     autoAlpha: 1,
                     x: 0,
                     force3D: true,
                     rotationZ: 0.01,
-                    ease: Power1.easeInOut
+                    ease: Power1.easeOut
                 },
-                "+=0"
+                "-=0.75"
             )
+            .to(
+                ["#copy-1", "#code"],
+                1, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    x: 0,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeOut
+                },
+                "-=0.75"
+            )
+            .staggerTo(
+                ["#line-1", '#line-2', "#line-3"],
+                1, {
+                    transformPerspective: 400,
+                    autoAlpha: 1,
+                    x: 0,
+                    force3D: true,
+                    rotationZ: 0.01,
+                    ease: Power1.easeOut,
+                    stagger: 0.2
+                }, "-=0.75"
 
-        .to(
-            ["#copy-2"],
-            0.5, {
-                transformPerspective: 400,
-                autoAlpha: 0,
-                x: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power0.easeInOut
-            }, "+=2"
-        )
-
-        .to(
-            ["#copy-3"],
-            1, {
-                transformPerspective: 400,
-                autoAlpha: 1,
-                x: 0,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power1.easeInOut
-            },
-            "+=0"
-        )
-
-        .to(
-            ["#cta-bg-wipe"],
-            1, {
-                x: "100%",
-                transformPerspective: 400,
-                autoAlpha: 1,
-                force3D: true,
-                rotationZ: 0.01,
-                ease: Power1.easeInOut,
-            }, "+=0.5"
-        )
-
-        // .to(
-        //     [".cta-ltr"],
-        //     0.5, {
-        //         fill: "rgba(255,255,255, 1)",
-        //     }, "-=0.5"
-        // )
+            )
+            // gsap.delayedCall(5, loop)
 
     };
 
@@ -277,8 +221,8 @@ var nameSpace = O2KL || {};
 var count = 1;
 
 function loop() {
-    if (count < 2) {
-        console.log(count);
+    if (count < 3) {
+        console.log(count, "in the loop");
         count++;
         O2KL.init();
     }

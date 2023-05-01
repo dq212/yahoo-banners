@@ -4,7 +4,7 @@ var imageSize = require("image-size");
 describe("zipfile", function() {
     it("should be under /Users/dq212/MyFiles/CLIENTS/o2kl/AARP/Banners/Caregiving-Display/Renew/300x250/node_modules/.bin/resize-bannekb", function() {
         var zip = fs.statSync(
-            "../HTML/6072-TruStage_YAHOO_Re-Engage_Animated_300x250_HTML.zip"
+            "../HTML/6072-Set-B_300x250_HTML.zip"
         );
         var fileSizeInKB = zip["size"] / 1000;
         expect(fileSizeInKB).not.toBeGreaterThan(

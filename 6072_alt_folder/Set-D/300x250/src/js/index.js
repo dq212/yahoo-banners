@@ -150,7 +150,7 @@ var nameSpace = O2KL || {};
                     rotationZ: 0.01,
                     ease: Power1.easeOut
                 },
-                "-=0.75"
+                "-=0.5"
             )
             .to(
                 ["#logo", "#cta"],
@@ -162,7 +162,7 @@ var nameSpace = O2KL || {};
                     rotationZ: 0.01,
                     ease: Power1.easeOut
                 },
-                "-=0.75"
+                "-=0.5"
             )
             .to(
                 ["#copy-1", "#code"],

@@ -148,6 +148,10 @@ $height: 250px;
     @extend .abs-pos;
 }
 
+#img-1 img {
+    @extend .abs-pos;
+}
+
 #code {
     @extend .abs-pos;
 }

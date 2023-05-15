@@ -52,7 +52,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.abs-pos, #bg, #wrapper, #click_through, #logo, #logo-bg, #copy-1, #copy-2, #copy-3, #copy-4, #copy-5, #cta, #cta-bg, #cta-img, #line-1, #line-2, #line-3, #img-1, #code {
+.abs-pos, #bg, #wrapper, #click_through, #logo, #logo-bg, #copy-1, #copy-2, #copy-3, #copy-4, #copy-5, #cta, #cta-bg, #cta-img, #line-1, #line-2, #line-3, #img-1, #img-1 img, #code {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -114,3 +114,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 406px;
   left: 23.3px;
   background: #fae07e; }
+
+#img-1 {
+  top: -2px; }

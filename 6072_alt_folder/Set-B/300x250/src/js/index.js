@@ -141,7 +141,7 @@ var nameSpace = O2KL || {};
             )
             .fromTo(
                 ["#logo-bg"],
-                0.75, { x: "-25%" }, {
+                0.75, { x: "-30%" }, {
                     transformPerspective: 400,
                     autoAlpha: 1,
                     x: 0,
@@ -149,7 +149,7 @@ var nameSpace = O2KL || {};
                     rotationZ: 0.01,
                     ease: Power1.easeOut
                 },
-                "-=0.75"
+                "-=0.5"
             )
             .to(
                 ["#logo", "#cta"],
@@ -161,7 +161,7 @@ var nameSpace = O2KL || {};
                     rotationZ: 0.01,
                     ease: Power1.easeOut
                 },
-                "-=0.75"
+                "-=0.5"
             )
             .to(
                 ["#copy-1", "#code"],
